@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Backup Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Battery Backup Calculator</h1>
-        <p>Calculate how long your battery will last based on your usage.</p>
-        <p>To get Design Capacity & Full Charge Capacity, go to <b>CMD</b> and type:</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate how long your laptop battery will last based on usage. Enter your laptop's design capacity and full charge capacity to get started."
+    />
+    <meta
+      name="keywords"
+      content="battery backup calculator, laptop battery life, battery capacity, battery usage"
+    />
+    <meta name="Shamaun Nabi" content="Online Laptop Battery Test Website" />
+    <title>Battery Backup Calculator | Calculate Laptop Battery Life</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Battery Backup Calculator</h1>
+      <p>Calculate how long your battery will last based on your usage.</p>
+    </header>
+    <main>
+      <section class="container">
+        <p>
+          To get Design Capacity & Full Charge Capacity, go to CMD and type:
+        </p>
         <pre>powercfg /batteryreport</pre>
         <form id="batteryForm">
-            <label for="designCapacity">Design Capacity (mWh):</label>
-            <input type="number" id="designCapacity" required>
-            <label for="fullChargeCapacity">Full Charge Capacity (mWh):</label>
-            <input type="number" id="fullChargeCapacity" required>
-            <button type="submit">Calculate</button>
+          <label for="designCapacity">Design Capacity (mWh):</label>
+          <input type="number" id="designCapacity" required />
+          <label for="fullChargeCapacity">Full Charge Capacity (mWh):</label>
+          <input type="number" id="fullChargeCapacity" required />
+          <button type="submit">Calculate</button>
         </form>
-        <pre>Developed By <a href="https://devnabi.com/">Md Shamaun Nabi</a> </pre>
-    </div>
+      </section>
+    </main>
 
     <!-- Modal Structure -->
     <div id="resultModal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Results</h2>
-            <p id="lightUsage"></p>
-            <p id="mediumUsage"></p>
-            <p id="heavyUsage"></p>
-        </div>
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Results</h2>
+        <p id="lightUsage"></p>
+        <p id="mediumUsage"></p>
+        <p id="heavyUsage"></p>
+      </div>
+    </div>
+
+    <div>
+      <footer>
+        <p>&copy; 2024 Shamaun Nabi. All rights reserved.</p>
+      </footer>
     </div>
 
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
